@@ -48,6 +48,14 @@ builder.Services.AddAuthentication(options =>
         };
     });
 
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("MinimumAge", policy =>
+        policy.AddRequirements(new MinimumAge(18))
+    );
+});
+
+
 builder.Services.AddSingleton<IAuthorizationHandler, AgeAuthorization>();
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<TokenService>();
