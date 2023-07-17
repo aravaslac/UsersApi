@@ -8,3 +8,6 @@ the secrets are stored in %AppData%\Microsoft\UserSecrets according to https://l
 
 To facilitate local secret generation, the file secrets.json are included in the project root.
 
+TODO:
+- Finish CRUD.
+- Add Swagger documentation
